@@ -11,13 +11,13 @@ export default function Home () {
         <div className='flex justify-around'>
           <Button
             label='Create Room'
-            target='/roomCreator'
+            target='/room/create'
           />
         </div>
         <div className='flex justify-around'>
           <Button
             label='Join Room'
-            target='/roomFinder'
+            target='/room/find'
           />
         </div>
       </section>
