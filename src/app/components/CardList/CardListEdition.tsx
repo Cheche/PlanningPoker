@@ -76,26 +76,24 @@ function CardListEdition ({ rommID }:Props) {
           <TodoListItem key={todo.id} todo={todo} setTodos={setTodos} />
         ))}
       </ul>
-      <form
-        onSubmit={(e) => e.preventDefault()}
-        style={{ display: 'flex', gap: '1rem' }}
-      >
-        <input
-          ref={newTodoInput}
-          type='text'
-          placeholder='Write a new todo 📝'
-          style={{
-            padding: '0.5rem 1rem',
-            border: 'none',
-            borderRadius: '0.25rem',
-            width: '100%',
-            backgroundColor: 'rgb(239 239 239)'
-          }}
-        />
+      <input
+        ref={newTodoInput}
+        type='text'
+        placeholder='Write a new todo 📝'
+        style={{
+          padding: '0.5rem 1rem',
+          border: 'none',
+          borderRadius: '0.25rem',
+          width: '100%',
+          backgroundColor: 'rgb(239 239 239)'
+        }}
+      />
 
+      <div>
         <button
           type='submit'
           title='Add a new todo'
+          className='rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none mb-10'
           style={{
             whiteSpace: 'nowrap',
             padding: '0.5rem 1rem',
@@ -116,7 +114,7 @@ function CardListEdition ({ rommID }:Props) {
         >
           Add Todo
         </button>
-      </form>
+      </div>
     </div>
   )
 }

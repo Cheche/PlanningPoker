@@ -1,4 +1,6 @@
 import CardListEdition from '@/app/components/CardList/CardListEdition'
+import Loading from '@/app/loading'
+import { Suspense } from 'react'
 
 export default function Create () {
   const roomID = 1
@@ -51,7 +53,9 @@ export default function Create () {
             {/* Cards Block */}
             {/* TODO: Hay que agregar un condicional para que este bloque se muestre si Room esta creado */}
             <label className='flex text-3xl mb-5'>Cards</label>
-            <CardListEdition cards={roomID} />
+            <Suspense fallback={<Loading />}>
+              <CardListEdition cards={roomID} />
+            </Suspense>
             <div>
               {/* TODO: Ver el mejor approach para que el boton mute dependiendo la necesidad */}
               {/* Variaciones:
