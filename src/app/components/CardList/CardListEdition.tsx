@@ -1,9 +1,6 @@
 'use client'
 import { type Dispatch, type SetStateAction, useRef, useState } from 'react'
 
-interface Props {
-    cards: any
-}
 function TodoListItem ({
   todo,
   setTodos
@@ -44,7 +41,7 @@ function TodoListItem ({
   )
 }
 
-function CardListEdition ({ rommID }:Props) {
+function CardListEdition ({ roomID }) {
   const [todos, setTodos] = useState([
     { id: crypto.randomUUID(), text: '🐕 Walk the dog' },
     { id: crypto.randomUUID(), text: '🍔 Eat lunch' },
